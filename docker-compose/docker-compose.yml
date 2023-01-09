@@ -3,7 +3,7 @@ services:
   api:
     image: web3labs/epirus-free-api:latest
     environment:
-      - NODE_ENDPOINT=${NODE_ENDPOINT}
+      - NODE_ENDPOINT=https://u0ahegkoiz:2_hUaaTCc04ikObr3JltZjhXmPpwu20XFaAw9YR5yI4@u0nxnvur67-u0t4jq3u9z-rpc.us0-aws.kaleido.io/
       - MONGO_CLIENT_URI=mongodb://mongodb:27017
       - REINDEX_ENDPOINT=http://ingestion/reindex/
       - MONGO_DB_NAME=epirus
@@ -34,7 +34,7 @@ services:
   ingestion:
     image: web3labs/epirus-free-ingestion:latest
     environment:
-      - NODE_ENDPOINT=${NODE_ENDPOINT}
+      - NODE_ENDPOINT=https://u0ahegkoiz:2_hUaaTCc04ikObr3JltZjhXmPpwu20XFaAw9YR5yI4@u0nxnvur67-u0t4jq3u9z-rpc.us0-aws.kaleido.io/
       - MONGO_CLIENT_URI=mongodb://mongodb:27017
       - MONGO_DB_NAME=epirus
     depends_on:
